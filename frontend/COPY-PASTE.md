@@ -369,7 +369,7 @@ const ProfileInfo = () => {
 		email: "johndoe@gmail.com",
 		followers: 100,
 		following: 200,
-		html_url: "https://github.com/burakorkmez",
+		html_url: "https://github.com/tanmaysh1211",
 		location: "Somewhere, Earth",
 		name: "John Doe",
 		public_gists: 100,
@@ -523,7 +523,7 @@ const Repo = () => {
 			</span>
 			<div className='flex gap-2 items-center flex-wrap'>
 				<a
-					href={"https://github.com/burakorkmez/mern-chat-app"}
+					href={"https://github.com/tanmaysh1211/Advanced-Chat-App"}
 					target='_blank'
 					rel='noreferrer'
 					className='flex items-center gap-2 text-lg font-semibold'
