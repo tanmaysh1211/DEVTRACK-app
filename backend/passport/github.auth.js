@@ -5,6 +5,11 @@ import User from "../models/user.model.js";
 
 dotenv.config();
 
+const callbackURL =
+  process.env.NODE_ENV === "production"
+    ? "https://DEVTRACK-app.onrender.com/api/auth/github/callback"
+    : "http://localhost:5000/api/auth/github/callback";
+
 passport.serializeUser(function (user, done) {
 	done(null, user);
 });
@@ -22,7 +27,7 @@ passport.use(
 		{
 			clientID: process.env.GITHUB_CLIENT_ID,
 			clientSecret: process.env.GITHUB_CLIENT_SECRET,
-			callbackURL: "https://mern-github-app.onrender.com/api/auth/github/callback",
+			callbackURL: callbackURL,
 		},
 		async function (accessToken, refreshToken, profile, done) {
 			const user = await User.findOne({ username: profile.username });
